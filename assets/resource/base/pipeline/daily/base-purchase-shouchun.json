@@ -1,0 +1,168 @@
+{
+  "选择行商-寿春": {
+    "recognition": "OCR",
+    "expected": "商品",
+    "replace": ["周","商"],
+    "roi": [355, 346, 358, 83],
+    "post_delay": 1000,
+    "action": "Click",
+    "target": [176, 159, 51, 52],
+    "next": ["行商选择商品-寿春"],
+    "interrupt": ["是否在最顶端-寿春", "是否在最底端-寿春"],
+    "timeout": 5000,
+    "on_error": ["刷新商品-寿春"]
+  },
+  "是否在最顶端-寿春": {
+    "recognition": "TemplateMatch",
+    "template": "base/base-purchase-upper.png",
+    "roi": [0, 385, 720, 128],
+    "post_delay": 1000,
+    "next": ["向下寻找商品1-寿春"],
+    "timeout": 3000,
+    "enabled": false
+  },
+  "是否在最底端-寿春": {
+    "recognition": "TemplateMatch",
+    "template": "base/base-purchase-bottom.png",
+    "roi": [0, 1178, 720, 101],
+    "post_delay": 1000,
+    "next": ["向上寻找商品1-寿春"],
+    "timeout": 3000,
+    "enabled": false
+  },
+  "行商选择商品-寿春": {
+    "recognition": "OCR",
+    "expected": "登",
+    "replace": [],
+    "roi": [46, 443, 612, 836],
+    "post_delay": 1000,
+    "action": "Click",
+    "next": ["据点商人购物-需要购买的数量-寿春"],
+    "timeout": 1000,
+    "on_error": ["据点商人购物-增加购买的数量-寿春","确认购买商品-寿春","刷新商品-寿春"]
+  },
+  "向上寻找商品1-寿春": {
+    "action": "Swipe",
+    "begin": [560, 926, 1, 1],
+    "end": [559, 1231, 1, 1],
+    "post_delay": 3000,
+    "next": ["向上寻找商品2-寿春", "行商选择商品-寿春"],
+    "interrupt": ["刷新商品-寿春"]
+  },
+  "向上寻找商品2-寿春": {
+    "action": "Swipe",
+    "begin": [560, 926, 1, 1],
+    "end": [559, 1231, 1, 1],
+    "post_delay": 3000,
+    "next": ["行商选择商品-寿春"],
+    "interrupt": ["刷新商品-寿春"]
+  },
+  "向下寻找商品1-寿春": {
+    "action": "Swipe",
+    "begin": [559, 1231, 1, 1],
+    "end": [560, 926, 1, 1],
+    "post_delay": 3000,
+    "next": ["行商选择商品-寿春", "向下寻找商品2-寿春", "是否在最底端-寿春"]
+  },
+  "向下寻找商品2-寿春": {
+    "action": "Swipe",
+    "begin": [559, 1231, 1, 1],
+    "end": [560, 926, 1, 1],
+    "post_delay": 3000
+  },
+  "刷新商品-寿春": {
+    "recognition": "OCR",
+    "expected": "商品",
+    "replace": ["周","商"],
+    "roi": [355, 346, 358, 83],
+    "post_delay": 1000,
+    "action": "Click",
+    "target": [667, 376, 43, 43],
+    "next": ["点击免费刷新-寿春", "免费刷新check-寿春"],
+    "focus": true,
+    "focus_tip": "进行免费刷新"
+  },
+  "点击免费刷新-寿春": {
+    "recognition": "OCR",
+    "expected": "免费",
+    "replace": ["免費", "免费"],
+    "roi": [399, 720, 273, 86],
+    "post_delay": 1000,
+    "action": "Click",
+    "next": ["选择行商-寿春"]
+  },
+  "免费刷新check-寿春": {
+    "recognition": "OCR",
+    "expected": "白金",
+    "roi": [142, 458, 429, 72],
+    "action": "Click",
+    "target": [666, 392, 30, 34],
+    "next": ["stop"],
+    "timeout": 2000,
+    "focus": true,
+    "focus_tip": "免费刷新次数已耗尽，停止任务"
+  },
+  "确认购买商品-寿春": {
+    "recognition": "OCR",
+    "expected": "购买",
+    "replace": ["買", "购买"],
+    "roi": [142, 680, 527, 237],
+    "action": "Click",
+    "post_wait_freezes": 1000,
+    "next": ["关闭商品获得界面-寿春","粟米不足-寿春","关闭购买页面-寿春"],
+    "on_error": ["刷新商品-寿春", "stop"],
+    "timeout": 10000
+  },
+   "据点商人购物-需要购买的数量-寿春": {
+    "recognition": "OCR",
+    "expected": "1",
+    "roi" : [323,705,72,72],
+    "post_wait_freezes": 1000,
+    "next": ["确认购买商品-寿春"],
+    "timeout": 500
+  },
+  "据点商人购物-增加购买的数量-寿春": {
+    "action": "Click",
+    "target": [470,723,53,38],
+    "next": ["据点商人购物-需要购买的数量-寿春"],
+    "on_error": ["据点商人购物-增加购买的数量-寿春"],
+    "timeout": 500
+  },
+  "粟米不足-寿春": {
+    "recognition": "OCR",
+    "expected": "前往",
+    "roi" : [427, 581, 193, 357],
+    "action": "Click",
+    "target": [256, 275, 169, 47],
+    "pre_delay": 1000,
+    "post_delay": 1000,
+    "next": ["关闭购买页面-寿春"]
+  },
+  "关闭购买页面-寿春": {
+    "recognition": "OCR",
+    "expected": "购买",
+    "replace": ["買", "购买"],
+    "roi": [142, 680, 527, 237],
+    "action": "Click",
+    "target": [658, 316, 36, 39],
+    "pre_delay": 1000,
+    "post_delay": 1000,
+    "next": ["stop"],
+    "focus": true,
+    "focus_tip": "所需的道具数量不足，停止任务"
+  },
+  "关闭商品获得界面-寿春": {
+    "pre_delay": 700,
+    "recognition": "TemplateMatch",
+    "template": "common_reward.png",
+    "green_mask": true,
+    "roi": [14, 23, 684, 597],
+    "threshold": 0.5,
+    "action": "Click",
+    "target": [633, 22, 19, 11],
+    "post_wait_freezes": 1000,
+    "next": ["刷新商品-寿春", "stop"],
+    "focus": true,
+    "focus_tip": "购买据点商品成功！"
+  }
+}
