@@ -151,7 +151,10 @@
     "recognition": "TemplateMatch",
     "template": [
       "newcomers_special_training/feng_bu/furong_head.png",
-      "newcomers_special_training/feng_bu/furong_head2.png"
+      "newcomers_special_training/feng_bu/furong_head2.png",
+      "newcomers_special_training/feng_bu/furong_hand.png",
+      "newcomers_special_training/feng_bu/furong_book.png",
+      "newcomers_special_training/feng_bu/furong_book2.png"
     ],
     "roi": [5,470,714,773],
     "action": "Click",
@@ -196,9 +199,14 @@
     "recognition": "TemplateMatch",
     "template": [
       "newcomers_special_training/feng_bu/achan_head.png",
-      "newcomers_special_training/feng_bu/achan_head.png"
+      "newcomers_special_training/feng_bu/achan_head2.png",
+      "newcomers_special_training/feng_bu/achan_head3.png",
+      "newcomers_special_training/feng_bu/achan_head4.png",
+      "newcomers_special_training/feng_bu/achan_shoes.png",
+      "newcomers_special_training/feng_bu/achan_shoes2.png"
     ],
     "roi": [5,470,714,773],
+    "green_mask": true,
     "action": "Click",
     "threshold": 0.93,
     "pre_delay": 500,
@@ -225,13 +233,17 @@
   "眼力提升-杨修3":{
     "recognition": "TemplateMatch",
     "template": [
+      "newcomers_special_training/feng_bu/yangxiu_mouth.png",
+      "newcomers_special_training/feng_bu/yangxiu_mouth.png",
+      "newcomers_special_training/feng_bu/yangxiu_clothes3.png",
+      "newcomers_special_training/feng_bu/yangxiu_clothes4.png",
       "newcomers_special_training/feng_bu/yangxiu_clothes.png",
       "newcomers_special_training/feng_bu/yangxiu_clothes2.png"
     ],
     "roi": [5,470,714,773],
     "green_mask": true,
     "action": "Click",
-    "threshold": 0.91,
+    "threshold": 0.93,
     "pre_delay": 800,
     "timeout": 10000,
     "post_delay": 3500,
@@ -242,7 +254,10 @@
     "recognition": "TemplateMatch",
     "template": [
       "newcomers_special_training/feng_bu/thief_eye.png",
-      "newcomers_special_training/feng_bu/thief_eye2.png"
+      "newcomers_special_training/feng_bu/thief_eye2.png",
+      "newcomers_special_training/feng_bu/thief_hug.png",
+      "newcomers_special_training/feng_bu/thief_hug2.png",
+      "newcomers_special_training/feng_bu/thief_head.png"
     ],
     "roi": [5,470,714,773],
     "action": "Click",
@@ -272,7 +287,8 @@
     "recognition": "TemplateMatch",
     "template": [
       "newcomers_special_training/feng_bu/dog_mouth.png",
-      "newcomers_special_training/feng_bu/dog_mouth2.png"
+      "newcomers_special_training/feng_bu/dog_mouth2.png",
+      "newcomers_special_training/feng_bu/dog_tail.png"
     ],
     "roi": [5,470,714,773],
     "action": "Click",
@@ -323,12 +339,15 @@
   "眼力提升-鸟3":{
     "recognition": "TemplateMatch",
     "template": [
+      "newcomers_special_training/feng_bu/bird_eye.png",
       "newcomers_special_training/feng_bu/bird_mouth.png",
-      "newcomers_special_training/feng_bu/bird_mouth.png"
+      "newcomers_special_training/feng_bu/bird_mouth2.png",
+      "newcomers_special_training/feng_bu/bird_head.png",
+      "newcomers_special_training/feng_bu/bird_head2.png"
     ],
     "roi": [5,470,714,773],
     "action": "Click",
-    "threshold": 0.95,
+    "threshold": 0.94,
     "pre_delay": 500,
     "timeout": 10000,
     "post_delay": 3500,
@@ -338,14 +357,17 @@
   "眼力提升-陈登2":{
     "recognition": "TemplateMatch",
     "template": [
+      "newcomers_special_training/feng_bu/chendeng_sleeve.png",
+      "newcomers_special_training/feng_bu/chendeng_sleeve2.png",
       "newcomers_special_training/feng_bu/chendeng_face.png",
       "newcomers_special_training/feng_bu/chendeng_face2.png",
       "newcomers_special_training/feng_bu/chendeng_head.png",
-      "newcomers_special_training/feng_bu/chendeng_head2.png"
+      "newcomers_special_training/feng_bu/chendeng_head2.png",
+      "newcomers_special_training/feng_bu/chendeng_clothes.png"
     ],
     "roi": [5,470,714,773],
     "action": "Click",
-    "threshold": 0.92,
+    "threshold": 0.85,
     "pre_delay": 500,
     "timeout": 1000,
     "post_delay": 3500,
